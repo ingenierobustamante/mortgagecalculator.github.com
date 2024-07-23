@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <title>Mortgage Calculator</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/estilos.css">
+        <script defer src="js/script.js"></script>
+    </head>
+    
+    <body>
+        <section class="container">
+
+            <form class="card-left card">
+
+                <div class="calculator__title">
+                    <h3 class="title">Mortgage Calculator</h3>
+                    <h5 class="clear" onclick="clearAll()">Clear All</h5>
+                </div>
+
+                <div class="Mortgage-amount">
+                    <p class="p-title">Mortgage Amount</p>
+                    <div class="container-input">
+                        <input type="text" name="price" id="price" class="input-value input-mortgage">
+                        <label for="valor" id="labelAmount" class="label-value label-left">£</label>
+                    </div>
+                    <h6 class="required">This field is required</h6>
+                </div>
+
+                <div class="mortgage-interes">
+                    <div class="mortgage-term">
+                        <p class="p-title">Mortgage Term</p>
+                        <div class="container-input">
+                            <input type="text" name="years" id="years" class="input-value">
+                            <label for="years" class="label-value">years</label>
+                        </div>
+                        <h6 class="required">This field is required</h6>
+                    </div>
+
+                    <div class="interest-rate">
+                        <p class="p-title">Interes Rate</p>
+                        <div class="container-input">
+                            <input type="text" name="porcentaje" id="porcentaje" class="input-value">
+                            <label for="years" class="label-value">%</label>
+                        </div>
+                        <h6 class="required">This field is required</h6>
+                    </div>
+                </div>
+
+                <div class="mortgage-type">
+                    <div class="mortgage-type">
+                        <p>Mortgage Type</p>
+                        <input type="radio" name="mortgage-type" id="radio1" class="option-radio">
+                        <label for="radio1" class="label-radio">Repayment</label>
+                        
+                        <input type="radio" name="mortgage-type" id="radio2" class="option-radio">
+                        <label for="radio2" class="label-radio">Interes Only</label>
+                    </div>
+                    <h6 class="required">This field is required</h6>
+                </div>
+                
+                <div class="btn caja">
+                    <input type="button" class="btnCalc" value="Calculate Repayments"  onclick="calcMortgage()">
+                </div>
+            </form>
+
+            
+            <!-- card right -->
+            <div class="card-right card">
+
+                <div class="mortgage-result" id="mortgage-result">
+                    <h3 class="title-right">Your results</h3>
+                    <p class="p-right">Your results are shown below based on the information you provided. To adjust the results, edit the form and click “calculate repayments” again.</p>
+                    <div class="card-result">
+                        <!-- esta parte comprende el resultado y será insertado por JS -->
+                    </div>
+                </div>
+
+                <div class="principal" id="principal">
+                    <img src="/img/illustration-empty.svg" alt="" class="result__img">
+                    <h3 class="title-right">Results shown here</h3>
+                    <p class="p-right">Complete the form and click “calculate repayments” to see what your monthly repayments would be.</p>
+                </div>
+
+            </div>
+        </section>
+    </body>
+</html>
